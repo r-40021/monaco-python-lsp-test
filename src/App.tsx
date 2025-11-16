@@ -30,7 +30,7 @@ export default function Home() {
 					Monaco Editor - Python
 				</h1>
 				<a href="https://microsoft.github.io/monaco-editor/" className="text-blue-500 underline mb-4 inline-block" target="_blank" rel="noopener noreferrer">
-						Official demo of Monaco Editor (no IntelliSense for Python)
+						Official demo site of Monaco Editor (no IntelliSense for Python)
 				</a>
 
 				<MonacoEditor

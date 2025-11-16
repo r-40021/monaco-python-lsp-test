@@ -29,8 +29,8 @@ export default function Home() {
 				<h1 className="text-2xl font-bold mb-4">
 					Monaco Editor - Python
 				</h1>
-				<a href="pure.html" className="text-blue-500 underline mb-4 inline-block">
-						Switch to Pure Monaco Editor (no IntelliSense)
+				<a href="https://microsoft.github.io/monaco-editor/" className="text-blue-500 underline mb-4 inline-block" target="_blank" rel="noopener noreferrer">
+						Official demo of Monaco Editor (no IntelliSense for Python)
 				</a>
 
 				<MonacoEditor

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Monaco Editor Python (Basic)</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+  <style>
+    #container {
+      width: 800px;
+      height: 600px;
+      border: 1px solid grey;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Monaco Editor (Python Basic Support)</h2>
+  <div id="container"></div>
+
+  <script>
+    // 2. Monaco Editorの本体がある場所を伝える
+    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs' } });
+
+    // 3. エディタを読み込んで作成
+    require(['vs/editor/editor.main'], () => {
+      monaco.editor.create(document.getElementById('container'), {
+        value: [
+          'import requests',
+          '',
+          'def get_data(url):',
+          '    try:',
+          '        response = requests.get(url)',
+          '        return response.json()',
+          '    except Exception as e:',
+          '        print(f"Error: {e}")',
+          '        return None',
+          '',
+          'data = get_data("https://api.example.com/data")',
+          'print(data)',
+          ''
+        ].join('\n'),
+
+        // 4. 言語を 'python' に指定 (これが重要)
+        language: 'python',
+        theme: 'vs-dark'
+      });
+    });
+  </script>
+</body>
+
+</html>

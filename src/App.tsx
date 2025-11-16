@@ -1,8 +1,7 @@
 import { useState } from "react";
 import MonacoEditor from "@/components/MonacoEditor";
 
-const initialCode = `
-import banana
+const initialCode = `import banana
 
 
 class Monkey:

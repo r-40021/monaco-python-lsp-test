@@ -1,23 +1,20 @@
 import { useState } from "react";
 import MonacoEditor from "@/components/MonacoEditor";
 
-const initialCode = `import numpy as np
-import pandas as pd
+const initialCode = `
+import banana
 
-def calculate_statistics(data: list[float]) -> dict:
-    """Calculate basic statistics for a list of numbers."""
-    arr = np.array(data)
-    
-    return {
-        'mean': float(np.mean(arr)),
-        'median': float(np.median(arr)),
-        'std': float(np.std(arr)),
-    }
 
-# Example usage
-data = [1.0, 2.5, 3.7, 4.2, 5.9, 6.1, 7.3, 8.0]
-result = calculate_statistics(data)
-print(result)
+class Monkey:
+    # Bananas the monkey can eat.
+    capacity = 10
+    def eat(self, n):
+        """Make the monkey eat n bananas!"""
+        self.capacity -= n * banana.size
+
+    def feeding_frenzy(self):
+        self.eat(9.25)
+        return "Yum yum"
 `;
 
 export default function Home() {

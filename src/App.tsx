@@ -26,9 +26,12 @@ export default function Home() {
 	return (
 		<main className="min-h-screen p-4">
 			<div className="max-w-7xl mx-auto">
-				<h1 className="text-2xl font-bold text-white mb-4">
+				<h1 className="text-2xl font-bold mb-4">
 					Monaco Editor - Python
 				</h1>
+				<a href="pure.html" className="text-blue-500 underline mb-4 inline-block">
+						Switch to Pure Monaco Editor (no IntelliSense)
+				</a>
 
 				<MonacoEditor
 					value={code}
